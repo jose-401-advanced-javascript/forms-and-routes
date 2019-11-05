@@ -31,12 +31,21 @@ export default class Home extends Component {
     this.setState({ [target.name]: target.value });
   }
 
+  handleOnClick = () => {
+    getRandomCharacter()
+      .then((fetchedChar) => {
+        this.setState({
+          character: fetchedChar[0]
+        });
+      });
+  }
+
   render() {
     return (
       <>
         <img src={this.state.character.photoUrl} alt={this.state.character.name} />
         <p>{this.state.character.name}</p>
-        <button>Get Random</button>
+        <button onClick={this.handleOnClick}>Get Random</button>
         <Form name={this.state.name} handleSubmit={this.handleSubmit} handleChange={this.handleChange} />
       </>
     );
