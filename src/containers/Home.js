@@ -6,8 +6,7 @@ import { getRandomCharacter } from '../services/avatar-api';
 export default class Home extends Component {
   state = {
     character: {},
-    name: '',
-    string: ''
+    name: ''
   }
 
   static propTypes = {
@@ -25,7 +24,7 @@ export default class Home extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.history.push(`/list/${this.state.string}`);
+    this.props.history.push(`/list/${this.state.name}`);
   }
 
   handleChange = ({ target }) => {
