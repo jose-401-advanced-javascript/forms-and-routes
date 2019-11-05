@@ -13,12 +13,13 @@ export default class Home extends Component {
 
   state = {
     random: [],
-    name: ''
+    name: '',
+    string: ''
   }
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.history.push(`/about/${this.state.name}`);
+    this.props.history.push(`/list/${this.state.string}`);
   }
 
   handleChange = ({ target }) => {
