@@ -14,18 +14,16 @@ export default function App() {
   
   return (
     <Router>
-      <>
-        <Header title={'Avatar: The Last Airbender'} />
-        <Switch>
-          <Route path="/home" component={Home} />
-          <Route path="/details/:id" component={Details} />
-        </Switch>
-        <Footer />
-      </>
+      <Header title={'Avatar: The Last Airbender'} />
+      <Switch>
+        <Route path="/" component={Home} />
+        <Route path="/details/:id" component={Details} />
+      </Switch>
+      <Footer />
     </Router>
   );
 }
 
-App.PropTypes = {
+App.propTypes = {
   title: PropTypes.string
 };

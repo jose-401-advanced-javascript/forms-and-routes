@@ -7,7 +7,7 @@ const Header = ({ title }) => {
     <header>
       <h1>{title}</h1>
       <nav>
-        <Link to="/home">Home</Link>
+        <Link to="/">Home</Link>
         <Link to="/list">Character List</Link>
       </nav>
     </header>
