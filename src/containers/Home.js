@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Form from '../components/Form';
 import { getRandomCharacter } from '../services/avatar-api';
+
 export default class Home extends Component {
   state = {
     character: {},
