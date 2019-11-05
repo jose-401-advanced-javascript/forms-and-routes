@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Form from '../components/Form';
+import Card from '../components/Card';
 import { getRandomCharacter } from '../services/avatar-api';
 
 export default class Home extends Component {
@@ -43,8 +44,7 @@ export default class Home extends Component {
   render() {
     return (
       <>
-        <img src={this.state.character.photoUrl} alt={this.state.character.name} />
-        <p>{this.state.character.name}</p>
+        <Card _id={this.state.character._id} name={this.state.character.name} photoUrl={this.state.character.photoUrl} />
         <button onClick={this.handleOnClick}>Get Random</button>
         <Form name={this.state.name} handleSubmit={this.handleSubmit} handleChange={this.handleChange} />
       </>
